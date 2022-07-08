@@ -6,34 +6,39 @@ function previousPic() {
 } */
 
 // с использованием условий if
+let firstPic = "images/img1.jpeg";
+let secondPic = "images/img2.jpeg";
+let thirdPic = "images/img3.jpeg";
+let fourthPic = "images/img4.jpeg";
+
 function nextPic() {
   let image = document.querySelector('.first-pic');
-  if (image.src.match("images/img1.jpeg")) {
-    image.src="images/img2.jpeg";  
+  if (image.src.match(firstPic)) {
+    image.src = secondPic;  
   }
-  else if (image.src.match("images/img2.jpeg")) {
-    image.src="images/img3.jpeg"; 
+  else if (image.src.match(secondPic)) {
+    image.src = thirdPic; 
   }
-  else if (image.src.match("images/img3.jpeg")) {
-    image.src="images/img4.jpeg"; 
+  else if (image.src.match(thirdPic)) {
+    image.src = fourthPic; 
   }
   else {
-    image.src = "images/img1.jpeg";
+    image.src = firstPic;
   }
 }
 function previousPic() {
   let image = document.querySelector('.first-pic');
-  if (image.src.match("images/img1.jpeg")) {
-    image.src="images/img4.jpeg";  
+  if (image.src.match(firstPic)) {
+    image.src=fourthPic;  
   }
-  else if (image.src.match("images/img4.jpeg")) {
-    image.src="images/img3.jpeg"; 
+  else if (image.src.match(fourthPic)) {
+    image.src=thirdPic; 
   }
-  else if (image.src.match("images/img3.jpeg")) {
-    image.src="images/img2.jpeg"; 
+  else if (image.src.match(thirdPic)) {
+    image.src=secondPic; 
   }
   else {
-    image.src = "images/img1.jpeg";
+    image.src =firstPic;
   }
 }
 // с циклом
